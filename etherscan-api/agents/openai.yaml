@@ -1,0 +1,4 @@
+interface:
+  display_name: "Etherscan API"
+  short_description: "Use Etherscan V2 for EVM explorer data"
+  default_prompt: "Use $etherscan-api to inspect EVM addresses, contracts, transactions, logs, token transfers, or chain metadata."

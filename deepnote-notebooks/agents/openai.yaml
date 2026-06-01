@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deepnote Notebooks"
+  short_description: "Build Deepnote AI notebook and app workflows"
+  default_prompt: "Use $deepnote-notebooks to design Deepnote SQL/Python notebook, integration, automation, API, or app workflows."
