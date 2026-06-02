@@ -49,6 +49,12 @@
       "skillPath": "skills/binance/p2p/SKILL.md",
       "computedHash": "9eec3205a93629aeb57023e776a7063864167fcd844a9c064e3dd00ebf59b50a"
     },
+    "payment-assistant": {
+      "source": "binance/binance-skills-hub",
+      "sourceType": "github",
+      "skillPath": "skills/binance/payment/SKILL.md",
+      "computedHash": "8863997374d2b1987a1cce47a8a66a229470a74d03d7e37d8ac2f6e61f175471"
+    },
     "query-address-info": {
       "source": "binance/binance-skills-hub",
       "sourceType": "github",
