@@ -12,11 +12,13 @@ Use this skill as the entry point for chart-related work in this repository. It 
 ## Workflow
 
 1. If the data source or metric definition is unclear, use `onchain-analysis` first to choose the source and analysis method.
-2. Identify the decision the chart must support: trend, comparison, flow, distribution, relationship, audit table, or report summary.
-3. Select a chart type from `references/chart-selection.md`.
-4. Shape the data with the schemas in `references/data-shaping.md`.
-5. Choose the output tool using `references/tool-routing.md`.
-6. Apply `references/visual-qa.md` before final delivery.
+2. Confirm the active output directory: `out/runs/<run_id>/`.
+3. Identify the decision the chart must support: trend, comparison, flow, distribution, relationship, audit table, or report summary.
+4. Select a chart type from `references/chart-selection.md`.
+5. Shape the data with the schemas in `references/data-shaping.md`.
+6. Choose the output tool using `references/tool-routing.md`.
+7. Store chart specs in `specs/`, rendered charts in `charts/`, summaries in `summaries/`, and final figure notes in `reports/`.
+8. Apply `references/visual-qa.md` before final delivery.
 
 ## Tool Rules
 
@@ -41,4 +43,5 @@ Use this skill as the entry point for chart-related work in this repository. It 
 - Read `references/chart-selection.md` when choosing the chart type.
 - Read `references/data-shaping.md` when preparing input rows for a chart.
 - Read `references/tool-routing.md` when deciding how to render or export the visual.
+- Read `references/output-contract.md` when creating or updating chart artifacts.
 - Read `references/visual-qa.md` before delivering a final chart, report figure, or dashboard mock.

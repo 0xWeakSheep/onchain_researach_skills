@@ -1,0 +1,11 @@
+{
+  "source": "Binance spot BTCUSDC 1d klines",
+  "time_zone": "UTC",
+  "first_date": "2025-06-02",
+  "last_date": "2026-06-02",
+  "days": 366,
+  "metric": "Daily quote asset volume in USDC",
+  "latest_quote_volume_usdc": 172043432.74,
+  "peak_quote_volume_usdc": 1813413859.04,
+  "peak_date": "2026-02-05"
+}

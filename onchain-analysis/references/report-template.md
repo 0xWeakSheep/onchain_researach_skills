@@ -18,23 +18,40 @@ List each platform and why it was used. Include query IDs, endpoint names, noteb
 
 Explain the steps in execution order:
 
-1. Data discovery and source selection.
-2. Query/API extraction parameters.
-3. Normalization and deduplication.
-4. Cross-checks.
-5. Chart or report assembly.
+1. Run directory setup under `out/runs/<run_id>/`.
+2. Data discovery and source selection.
+3. Query/API extraction parameters.
+4. Normalization and deduplication.
+5. Cross-checks.
+6. Chart or report assembly through `onchain-charting`.
 
 ## Findings
 
 Use short bullets with numbers, dates, units, and denominators. Separate facts from interpretation.
 
-## Chart Suggestions
+## Chart Plan
 
-- Time series: line or area chart for balances, flows, volume, active users, fees, or TVL.
-- Category comparison: bar chart for counterparties, tokens, chains, protocols, or holders.
-- Composition over time: stacked area when categories sum to a meaningful total.
-- Outlier review: scatter plot or ranked table for unusual transfers, wallets, or days.
-- Audit trail: table with tx hash, block/time, from, to, token, amount, source, and notes.
+Summarize the `onchain-charting` decision:
+
+- Chart objective.
+- Chart type.
+- Data file path.
+- Chart spec path.
+- Rendered chart path.
+- Visual QA caveats.
+
+## Artifact Paths
+
+List final files:
+
+- `manifest.json`:
+- `run.md`:
+- `data/`:
+- `charts/`:
+- `summaries/`:
+- `reports/`:
+- `specs/`:
+- `logs/`:
 
 ## Caveats
 

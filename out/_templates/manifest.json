@@ -1,0 +1,25 @@
+{
+  "run_id": "YYYYMMDD-topic-slug",
+  "created_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "status": "draft",
+  "objective": "",
+  "scope": {
+    "chains": [],
+    "assets": [],
+    "addresses": [],
+    "time_window": "",
+    "timezone": "UTC"
+  },
+  "skills_used": [],
+  "sources": [],
+  "artifacts": {
+    "data": [],
+    "charts": [],
+    "summaries": [],
+    "reports": [],
+    "specs": [],
+    "logs": []
+  },
+  "caveats": [],
+  "next_checks": []
+}

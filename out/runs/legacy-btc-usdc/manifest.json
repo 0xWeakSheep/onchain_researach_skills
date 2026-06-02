@@ -1,0 +1,39 @@
+{
+  "run_id": "legacy-btc-usdc",
+  "created_at": "unknown",
+  "status": "migrated",
+  "objective": "Preserve previously generated BTC/USDC volume and volatility artifacts in the normalized output layout.",
+  "scope": {
+    "chains": [],
+    "assets": ["BTC", "USDC"],
+    "addresses": [],
+    "time_window": "2025-06-02 to 2026-06-02",
+    "timezone": "UTC"
+  },
+  "skills_used": ["onchain-charting"],
+  "sources": ["Binance spot BTCUSDC 1d klines"],
+  "artifacts": {
+    "data": [
+      "data/btc_usdc_daily_volume.json",
+      "data/btc_usdc_30d_historical_volatility.json"
+    ],
+    "charts": [
+      "charts/btc_usdc_daily_volume.png",
+      "charts/btc_usdc_30d_historical_volatility.png"
+    ],
+    "summaries": [
+      "summaries/btc_usdc_daily_volume_summary.json",
+      "summaries/btc_usdc_30d_historical_volatility_summary.json"
+    ],
+    "reports": [],
+    "specs": [],
+    "logs": []
+  },
+  "caveats": [
+    "Migrated from legacy generated/ files.",
+    "No original run notes or chart specs were available."
+  ],
+  "next_checks": [
+    "Regenerate with a complete run.md and chart spec if this output is reused."
+  ]
+}

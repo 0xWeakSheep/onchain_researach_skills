@@ -1,0 +1,9 @@
+{
+  "source": "Binance spot ETHUSDC 1d klines",
+  "first_date": "2025-06-02",
+  "last_date": "2026-06-02",
+  "days": 366,
+  "latest_quote_volume_usdc": 93619863.592061,
+  "peak_quote_volume_usdc": 5072323323.703879,
+  "peak_date": "2025-07-18"
+}

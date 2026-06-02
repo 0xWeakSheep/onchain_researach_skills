@@ -4,10 +4,22 @@ Codex skill pack for onchain analysis charts: route data sources, shape analysis
 
 ## Main Flow
 
-1. Use `onchain-analysis` to choose the right data source or analysis surface.
-2. Use the platform skill only when the task needs platform-specific details.
-3. Use `onchain-charting` before producing any chart, dashboard, diagram, or report figure.
-4. Use `chart-visualization` only when a hosted AntV chart image is appropriate and the data is safe to send to its online API.
+1. Create or reuse a run directory under `out/runs/<run_id>/`.
+2. Use `onchain-analysis` to choose the right data source, metric definition, validation plan, and platform skill.
+3. Use the platform skill only when platform-specific details are needed.
+4. Use `onchain-charting` before producing any chart, dashboard, diagram, or report figure.
+5. Use `chart-visualization` only when a hosted AntV chart image is appropriate and the data is safe to send to its online API.
+6. Store every artifact in the active `out/runs/<run_id>/` directory and update `manifest.json`.
+
+## Skill Flow
+
+| Step | Use Skill | Output Location |
+|---|---|---|
+| Define scope and source | `onchain-analysis` | `out/runs/<run_id>/run.md`, `out/runs/<run_id>/specs/` |
+| Platform-specific plan or collection | Arkham, Etherscan, Dune, Hex, Observable, Deepnote, or Binance Web3 data skill | `out/runs/<run_id>/data/`, `out/runs/<run_id>/logs/` |
+| Chart planning and data shaping | `onchain-charting` | `out/runs/<run_id>/specs/`, `out/runs/<run_id>/summaries/` |
+| Render chart image or diagram | `chart-visualization`, Mermaid/FigJam, notebook, spreadsheet, or frontend chart library | `out/runs/<run_id>/charts/` |
+| Final narrative or report | `onchain-analysis` plus `onchain-charting` QA | `out/runs/<run_id>/reports/` |
 
 ## Skills
 
@@ -33,6 +45,10 @@ Codex skill pack for onchain analysis charts: route data sources, shape analysis
 
 Keep skills that help with onchain analysis data, chart planning, chart rendering, and report/dashboard figures.
 Do not add broad trading, wallet operation, payment, posting, fiat/P2P, or CEX account-management skills unless they are explicitly needed for a chart workflow.
+
+## Output Contract
+
+All generated files must go under `out/`. See `out/README.md` for directory layout, naming rules, required `manifest.json`, and run documentation standards.
 
 ## Git Practice
 

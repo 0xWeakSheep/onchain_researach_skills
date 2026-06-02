@@ -1,0 +1,33 @@
+{
+  "run_id": "legacy-eth-usdc",
+  "created_at": "unknown",
+  "status": "migrated",
+  "objective": "Preserve previously generated ETH/USDC volume and volatility artifacts in the normalized output layout.",
+  "scope": {
+    "chains": [],
+    "assets": ["ETH", "USDC"],
+    "addresses": [],
+    "time_window": "2025-06-02 to 2026-06-02",
+    "timezone": "UTC"
+  },
+  "skills_used": ["onchain-charting"],
+  "sources": ["Binance spot ETHUSDC 1d klines"],
+  "artifacts": {
+    "data": ["data/eth_usdc_daily_volume.json"],
+    "charts": [
+      "charts/eth_usdc_daily_quote_volume.png",
+      "charts/eth_usdc_30d_annualized_volatility.png"
+    ],
+    "summaries": ["summaries/eth_usdc_daily_volume_summary.json"],
+    "reports": [],
+    "specs": [],
+    "logs": []
+  },
+  "caveats": [
+    "Migrated from legacy root-level files.",
+    "No original run notes or chart specs were available."
+  ],
+  "next_checks": [
+    "Regenerate with a complete run.md and chart spec if this output is reused."
+  ]
+}

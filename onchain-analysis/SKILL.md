@@ -22,12 +22,14 @@ Coordinate onchain analysis across explorer APIs, intelligence APIs, SQL warehou
 
 ## Analysis Workflow
 
-1. Define the subject: chain(s), address/entity/token/protocol, timeframe, asset scope, and required granularity.
-2. Choose source roles: primary data source, secondary validation source, visualization/reporting surface, and any manual explorer check.
-3. Define metrics before querying: units, USD conversion source, timestamp convention, block range, inclusion/exclusion rules, and dedupe keys.
-4. Collect data with reproducible parameters and preserve query/API URLs, query IDs, endpoint names, or notebook links.
-5. Cross-check totals across at least two independent surfaces when the conclusion depends on balances, volumes, labels, or transfers.
-6. Output concise findings with method, caveats, and next checks.
+1. Create or reuse `out/runs/<run_id>/` and initialize `manifest.json` plus `run.md`.
+2. Define the subject: chain(s), address/entity/token/protocol, timeframe, asset scope, and required granularity.
+3. Choose source roles: primary data source, secondary validation source, visualization/reporting surface, and any manual explorer check.
+4. Define metrics before querying: units, USD conversion source, timestamp convention, block range, inclusion/exclusion rules, and dedupe keys.
+5. Collect data with reproducible parameters and preserve query/API URLs, query IDs, endpoint names, or notebook links.
+6. Store data, specs, summaries, logs, reports, and chart outputs under the active `out/runs/<run_id>/` directory.
+7. Cross-check totals across at least two independent surfaces when the conclusion depends on balances, volumes, labels, or transfers.
+8. Output concise findings with method, caveats, and next checks.
 
 ## Output Contract
 
@@ -47,5 +49,6 @@ Keep chart decisions centralized in `onchain-charting`; do not duplicate chart-s
 ## References
 
 - Read `references/platform-selection.md` when choosing between platforms.
+- Read `references/workflow-output.md` when setting up the full run flow and output directory.
 - Read `references/report-template.md` when the user asks for a final analysis report.
 - Read `references/charting-lite.md` only as a compatibility pointer to `onchain-charting`.
