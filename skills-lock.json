@@ -7,6 +7,12 @@
       "skillPath": "skills/binance/binance/SKILL.md",
       "computedHash": "05df646950f9f44e8284e34e02d465185ce7d6f9ea4fa90a599af6d24428f81c"
     },
+    "binance-agentic-wallet": {
+      "source": "binance/binance-skills-hub",
+      "sourceType": "github",
+      "skillPath": "skills/binance-web3/binance-agentic-wallet/SKILL.md",
+      "computedHash": "476956fe5bae03202b69b5966b4f717ef5a6d1f8e9b5218a2274ea21ab3cb843"
+    },
     "binance-tokenized-securities-info": {
       "source": "binance/binance-skills-hub",
       "sourceType": "github",
