@@ -73,6 +73,12 @@
       "skillPath": "skills/binance-web3/query-token-info/SKILL.md",
       "computedHash": "70c448eec1a9349adf8977ba180ed421be62cc01d49b22bc4035eaae8baac605"
     },
+    "square-post": {
+      "source": "binance/binance-skills-hub",
+      "sourceType": "github",
+      "skillPath": "skills/binance/square-post/SKILL.md",
+      "computedHash": "3732bcdc2b540307148348f46767783d28bacf0526aed22f12c96664183c7c9c"
+    },
     "trading-signal": {
       "source": "binance/binance-skills-hub",
       "sourceType": "github",
