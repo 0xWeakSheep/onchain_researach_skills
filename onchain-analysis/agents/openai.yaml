@@ -1,4 +1,0 @@
-interface:
-  display_name: "Onchain Analysis"
-  short_description: "Route cross-platform onchain analysis workflows"
-  default_prompt: "Use $onchain-analysis to plan a wallet, token, protocol, or flow analysis across the available onchain platforms."

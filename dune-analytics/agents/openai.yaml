@@ -1,4 +1,0 @@
-interface:
-  display_name: "Dune Analytics"
-  short_description: "Use Dune SQL, APIs, and data catalog workflows"
-  default_prompt: "Use $dune-analytics to build Dune SQL, Data API, dashboard, or catalog workflows for onchain analysis."

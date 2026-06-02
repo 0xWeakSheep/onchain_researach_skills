@@ -1,4 +1,0 @@
-interface:
-  display_name: "Hex Analytics"
-  short_description: "Build Hex notebooks, apps, and data workflows"
-  default_prompt: "Use $hex-analytics to design Hex SQL/Python notebook, data app, integration, or sharing workflows."

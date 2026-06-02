@@ -1,4 +1,0 @@
-interface:
-  display_name: "Observable Notebooks"
-  short_description: "Build Observable notebooks and lightweight charts"
-  default_prompt: "Use $observable-notebooks to build Observable notebook, Plot, Inputs, SQL, sharing, or embed workflows."
