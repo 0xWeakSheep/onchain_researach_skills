@@ -3,6 +3,7 @@ out/runs/
 generated/
 
 # Local recording and render intermediates.
+public/*.mp4
 *.mov
 *.webm
 *.mkv
