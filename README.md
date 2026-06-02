@@ -4,17 +4,19 @@ Codex skill pack for onchain analysis charts: route data sources, shape analysis
 
 ## Main Flow
 
-1. Create or reuse a run directory under `out/runs/<run_id>/`.
-2. Use `onchain-analysis` to choose the right data source, metric definition, validation plan, and platform skill.
-3. Use the platform skill only when platform-specific details are needed.
-4. Use `onchain-charting` before producing any chart, dashboard, diagram, or report figure.
-5. Use `chart-visualization` only when a hosted AntV chart image is appropriate and the data is safe to send to its online API.
-6. Store every artifact in the active `out/runs/<run_id>/` directory and update `manifest.json`.
+1. Use `onchain-planner` as the entry skill for multi-step analysis, charting, dashboard, notebook, or report work.
+2. Create or reuse a run directory under `out/runs/<run_id>/` and write `specs/skill-plan.md` when the workflow has multiple steps.
+3. Use `onchain-analysis` to choose the right data source, metric definition, validation plan, and platform skill.
+4. Use the platform skill only when platform-specific details are needed.
+5. Use `onchain-charting` before producing any chart, dashboard, diagram, or report figure.
+6. Use `chart-visualization` only when a hosted AntV chart image is appropriate and the data is safe to send to its online API.
+7. Store every artifact in the active `out/runs/<run_id>/` directory and update `manifest.json`.
 
 ## Skill Flow
 
 | Step | Use Skill | Output Location |
 |---|---|---|
+| Plan workflow and skill sequence | `onchain-planner` | `out/runs/<run_id>/specs/skill-plan.md`, `out/runs/<run_id>/run.md` |
 | Define scope and source | `onchain-analysis` | `out/runs/<run_id>/run.md`, `out/runs/<run_id>/specs/` |
 | Platform-specific plan or collection | Arkham, Etherscan, Dune, Hex, Observable, Deepnote, or Binance Web3 data skill | `out/runs/<run_id>/data/`, `out/runs/<run_id>/logs/` |
 | Chart planning and data shaping | `onchain-charting` | `out/runs/<run_id>/specs/`, `out/runs/<run_id>/summaries/` |
@@ -25,6 +27,7 @@ Codex skill pack for onchain analysis charts: route data sources, shape analysis
 
 | Skill | Role |
 |---|---|
+| `onchain-planner` | Entry planner that chooses skill sequence, run directory, expected artifacts, and validation gates. |
 | `onchain-analysis` | Main onchain analysis router for wallet, token, protocol, flow, and dashboard tasks. |
 | `onchain-charting` | Chart selection, data shaping, tool routing, and visual QA. |
 | `arkham-intelligence-api` | Arkham entity, address, flow, portfolio, transfer, token, and alert workflows. |

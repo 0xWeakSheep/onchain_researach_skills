@@ -4,7 +4,7 @@ Choose the rendering path based on output, privacy, repeatability, and interacti
 
 ## Data First
 
-If the request starts from a research question rather than chart-ready rows, route upstream through `onchain-analysis` before rendering. That skill chooses Arkham, Etherscan, Dune, Hex, Observable, Deepnote, Binance Web3 market data, or another source; this skill then turns the result into a chart.
+If the request needs a workflow decision, route upstream through `onchain-planner`. If the request starts from a research question rather than chart-ready rows, route upstream through `onchain-analysis` before rendering. That skill chooses Arkham, Etherscan, Dune, Hex, Observable, Deepnote, Binance Web3 market data, or another source; this skill then turns the result into a chart.
 
 All rendered artifacts must be written to `out/runs/<run_id>/`; see `references/output-contract.md`.
 

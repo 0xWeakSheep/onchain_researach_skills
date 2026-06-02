@@ -7,18 +7,19 @@ description: Onchain chart planning and visualization routing guide. Use when Co
 
 ## Overview
 
-Use this skill as the entry point for chart-related work in this repository. It turns onchain data questions into chart plans, data schemas, tool choices, and visual QA checks.
+Use this skill as the chart entry point after `onchain-planner` has chosen the workflow. It turns onchain data questions into chart plans, data schemas, tool choices, and visual QA checks.
 
 ## Workflow
 
-1. If the data source or metric definition is unclear, use `onchain-analysis` first to choose the source and analysis method.
-2. Confirm the active output directory: `out/runs/<run_id>/`.
-3. Identify the decision the chart must support: trend, comparison, flow, distribution, relationship, audit table, or report summary.
-4. Select a chart type from `references/chart-selection.md`.
-5. Shape the data with the schemas in `references/data-shaping.md`.
-6. Choose the output tool using `references/tool-routing.md`.
-7. Store chart specs in `specs/`, rendered charts in `charts/`, summaries in `summaries/`, and final figure notes in `reports/`.
-8. Apply `references/visual-qa.md` before final delivery.
+1. If the full skill sequence is unclear, use `onchain-planner` first.
+2. If the data source or metric definition is unclear, use `onchain-analysis` first to choose the source and analysis method.
+3. Confirm the active output directory: `out/runs/<run_id>/`.
+4. Identify the decision the chart must support: trend, comparison, flow, distribution, relationship, audit table, or report summary.
+5. Select a chart type from `references/chart-selection.md`.
+6. Shape the data with the schemas in `references/data-shaping.md`.
+7. Choose the output tool using `references/tool-routing.md`.
+8. Store chart specs in `specs/`, rendered charts in `charts/`, summaries in `summaries/`, and final figure notes in `reports/`.
+9. Apply `references/visual-qa.md` before final delivery.
 
 ## Tool Rules
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Onchain Planner"
+  short_description: "Choose the right skills for onchain workflows."
+  default_prompt: "Use $onchain-planner to choose the skill sequence and output plan for an onchain analysis or charting task."

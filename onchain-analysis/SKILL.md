@@ -7,7 +7,7 @@ description: Cross-platform onchain analysis coordinator. Use when Codex needs t
 
 ## Overview
 
-Coordinate onchain analysis across explorer APIs, intelligence APIs, SQL warehouses, and notebook/reporting tools. Keep this skill focused on routing, method design, validation, and output structure; use platform skills for platform-specific syntax and endpoints.
+Coordinate onchain analysis across explorer APIs, intelligence APIs, SQL warehouses, and notebook/reporting tools. Keep this skill focused on source selection, method design, validation, and output structure; use `onchain-planner` for the upstream skill sequence and use platform skills for platform-specific syntax and endpoints.
 
 ## Routing
 
@@ -18,18 +18,20 @@ Coordinate onchain analysis across explorer APIs, intelligence APIs, SQL warehou
 - Use `observable-notebooks` when the requested output is a reactive JavaScript notebook, interactive visualization, Plot/D3 chart, public embed, or lightweight web-native exploratory notebook.
 - Use `deepnote-notebooks` when the requested output is an AI-assisted SQL/Python notebook, scheduled notebook, API-triggered run, Streamlit app, or team workflow.
 - Use Binance Web3 market data project skills only for token search, token market data/K-lines, address holdings, audit signals, tokenized securities, market rankings, meme launch data, and smart-money signal datasets. Do not route wallet operations, payments, posting, fiat/P2P, or order execution through this repository.
+- Use `onchain-planner` first when the request needs a multi-step skill sequence or when it is unclear whether analysis, charting, platform data, notebook, or report skills are needed.
 - Use `onchain-charting` for chart type selection, data shaping, rendering route, and visual QA whenever the output includes a chart, dashboard, diagram, or report figure.
 
 ## Analysis Workflow
 
-1. Create or reuse `out/runs/<run_id>/` and initialize `manifest.json` plus `run.md`.
-2. Define the subject: chain(s), address/entity/token/protocol, timeframe, asset scope, and required granularity.
-3. Choose source roles: primary data source, secondary validation source, visualization/reporting surface, and any manual explorer check.
-4. Define metrics before querying: units, USD conversion source, timestamp convention, block range, inclusion/exclusion rules, and dedupe keys.
-5. Collect data with reproducible parameters and preserve query/API URLs, query IDs, endpoint names, or notebook links.
-6. Store data, specs, summaries, logs, reports, and chart outputs under the active `out/runs/<run_id>/` directory.
-7. Cross-check totals across at least two independent surfaces when the conclusion depends on balances, volumes, labels, or transfers.
-8. Output concise findings with method, caveats, and next checks.
+1. Confirm the active `onchain-planner` skill plan when the task has multiple steps.
+2. Create or reuse `out/runs/<run_id>/` and initialize `manifest.json` plus `run.md`.
+3. Define the subject: chain(s), address/entity/token/protocol, timeframe, asset scope, and required granularity.
+4. Choose source roles: primary data source, secondary validation source, visualization/reporting surface, and any manual explorer check.
+5. Define metrics before querying: units, USD conversion source, timestamp convention, block range, inclusion/exclusion rules, and dedupe keys.
+6. Collect data with reproducible parameters and preserve query/API URLs, query IDs, endpoint names, or notebook links.
+7. Store data, specs, summaries, logs, reports, and chart outputs under the active `out/runs/<run_id>/` directory.
+8. Cross-check totals across at least two independent surfaces when the conclusion depends on balances, volumes, labels, or transfers.
+9. Output concise findings with method, caveats, and next checks.
 
 ## Output Contract
 

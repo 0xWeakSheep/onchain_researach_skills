@@ -6,10 +6,11 @@
 
 ## Skill Flow
 
-1. `onchain-analysis`:
-2. Platform skill:
-3. `onchain-charting`:
-4. Renderer:
+1. `onchain-planner`:
+2. `onchain-analysis`:
+3. Platform skill:
+4. `onchain-charting`:
+5. Renderer:
 
 ## Outputs
 

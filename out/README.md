@@ -37,6 +37,7 @@ Every run should include:
 
 - `manifest.json`: source, scope, skills used, files produced, caveats.
 - `run.md`: short human-readable description of the task, method, outputs, and next checks.
+- `specs/skill-plan.md`: required when a task uses more than one skill or has multiple execution steps.
 
 ## Naming
 
@@ -60,8 +61,9 @@ reports/eth-usdc-volume-report.md
 
 ## Skill Flow
 
-1. `onchain-analysis`: choose data source, platform skill, metric definition, validation plan.
-2. Platform skill: collect or plan platform-specific data work.
-3. `onchain-charting`: choose chart type, shape chart data, decide renderer, run visual QA.
-4. `chart-visualization`: generate hosted AntV image only when data is safe for external upload.
-5. Final output: write all artifacts to the active `out/runs/<run_id>/` directory and update `manifest.json`.
+1. `onchain-planner`: choose skill sequence, run directory, expected artifacts, validation gates.
+2. `onchain-analysis`: choose data source, platform skill, metric definition, validation plan.
+3. Platform skill: collect or plan platform-specific data work.
+4. `onchain-charting`: choose chart type, shape chart data, decide renderer, run visual QA.
+5. `chart-visualization`: generate hosted AntV image only when data is safe for external upload.
+6. Final output: write all artifacts to the active `out/runs/<run_id>/` directory and update `manifest.json`.

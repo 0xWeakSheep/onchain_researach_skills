@@ -4,6 +4,7 @@ Use this file when a request could be solved by multiple onchain platforms.
 
 ## Source Roles
 
+- Onchain Planner: workflow-level skill sequence, run directory, expected artifacts, and validation gates before platform selection.
 - Arkham: entity-first intelligence, labels, attribution, entity/address portfolios, counterparties, transfers, alerts, and confidence-aware investigation.
 - Etherscan: raw EVM explorer evidence, address transactions, token transfers, logs/topics, ABI/source, contract creation, gas, block stats, chain IDs, and verification.
 - Dune: SQL over indexed onchain datasets, cross-chain aggregates, dashboards, Data API, materialized views, pipelines, uploads, dbt, Trino, and BI/notebook connections.
@@ -15,6 +16,7 @@ Use this file when a request could be solved by multiple onchain platforms.
 
 ## Default Routing
 
+- Multi-step or ambiguous workflow question: `onchain-planner` first, then use this file for source selection.
 - Wallet identity or counterparty question: Arkham first, Etherscan for raw transaction evidence, Dune if aggregation is needed.
 - Contract or event question: Etherscan first for ABI/source/logs, Dune for large-scale aggregation, Arkham for labeled counterparties.
 - Protocol metric question: Dune first, Etherscan for spot checks, Arkham for entity labels.

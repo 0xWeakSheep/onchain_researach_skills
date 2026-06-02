@@ -19,11 +19,12 @@ List each platform and why it was used. Include query IDs, endpoint names, noteb
 Explain the steps in execution order:
 
 1. Run directory setup under `out/runs/<run_id>/`.
-2. Data discovery and source selection.
-3. Query/API extraction parameters.
-4. Normalization and deduplication.
-5. Cross-checks.
-6. Chart or report assembly through `onchain-charting`.
+2. Skill plan in `specs/skill-plan.md`.
+3. Data discovery and source selection.
+4. Query/API extraction parameters.
+5. Normalization and deduplication.
+6. Cross-checks.
+7. Chart or report assembly through `onchain-charting`.
 
 ## Findings
 
@@ -46,6 +47,7 @@ List final files:
 
 - `manifest.json`:
 - `run.md`:
+- `specs/skill-plan.md`:
 - `data/`:
 - `charts/`:
 - `summaries/`:
