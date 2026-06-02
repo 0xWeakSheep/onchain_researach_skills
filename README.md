@@ -26,14 +26,13 @@ Codex skill pack for onchain analysis charts: route data sources, shape analysis
 
 - `chart-visualization`: Installed from `antvis/chart-visualization-skills@chart-visualization`.
   It generates chart images through the AntV online visualization API, so redact sensitive data before using it on private investigations.
-- Binance Skills Hub: Installed from `https://www.binance.com/zh-CN/skills` / `binance/binance-skills-hub`.
-  Installed project skills: `binance`, `binance-agentic-wallet`, `binance-tokenized-securities-info`, `crypto-market-rank`, `fiat`, `meme-rush`, `onchain-pay-open-api`, `p2p`, `payment-assistant`, `query-address-info`, `query-token-audit`, `query-token-info`, `square-post`, `trading-signal`.
-  Trading, wallet, payment, order, transfer, and publishing actions require explicit user confirmation and valid Binance credentials or sessions.
+- Binance Web3 market data skills from `binance/binance-skills-hub`: `binance-tokenized-securities-info`, `crypto-market-rank`, `meme-rush`, `query-address-info`, `query-token-audit`, `query-token-info`, `trading-signal`.
+  These are kept only as market, token, address, audit, and signal data sources for chart workflows.
 
 ## Scope
 
 Keep skills that help with onchain analysis data, chart planning, chart rendering, and report/dashboard figures.
-Do not add broad trading, wallet operation, payment, posting, or CEX account-management skills unless they are explicitly needed for a chart workflow.
+Do not add broad trading, wallet operation, payment, posting, fiat/P2P, or CEX account-management skills unless they are explicitly needed for a chart workflow.
 
 ## Git Practice
 

@@ -1,6 +1,6 @@
 ---
 name: onchain-analysis
-description: Cross-platform onchain analysis coordinator. Use when Codex needs to plan, execute, or review wallet, entity, token, protocol, bridge, exchange, flow, dashboard, or reporting work across Arkham, Etherscan, Dune, Hex, Observable, Deepnote, or similar tools; choose data sources, define metrics, write query/API plans, cross-check results, and produce concise analysis outputs.
+description: Cross-platform onchain analysis coordinator. Use when Codex needs to plan, execute, or review wallet, entity, token, protocol, bridge, exchange, flow, dashboard, or reporting work across Arkham, Etherscan, Dune, Hex, Observable, Deepnote, Binance Web3 market data, or similar tools; choose data sources, define metrics, write query/API plans, cross-check results, and hand chart work to onchain-charting.
 ---
 
 # Onchain Analysis
@@ -17,6 +17,8 @@ Coordinate onchain analysis across explorer APIs, intelligence APIs, SQL warehou
 - Use `hex-analytics` when the requested output is a collaborative SQL/Python notebook, app, report, scheduled run, or stakeholder-facing internal analysis.
 - Use `observable-notebooks` when the requested output is a reactive JavaScript notebook, interactive visualization, Plot/D3 chart, public embed, or lightweight web-native exploratory notebook.
 - Use `deepnote-notebooks` when the requested output is an AI-assisted SQL/Python notebook, scheduled notebook, API-triggered run, Streamlit app, or team workflow.
+- Use Binance Web3 market data project skills only for token search, token market data/K-lines, address holdings, audit signals, tokenized securities, market rankings, meme launch data, and smart-money signal datasets. Do not route wallet operations, payments, posting, fiat/P2P, or order execution through this repository.
+- Use `onchain-charting` for chart type selection, data shaping, rendering route, and visual QA whenever the output includes a chart, dashboard, diagram, or report figure.
 
 ## Analysis Workflow
 
@@ -37,13 +39,13 @@ Use this shape unless the user asks for another format:
 - Method
 - Query/API/notebook plan
 - Findings
-- Chart suggestions
+- Chart plan: delegate details to `onchain-charting`
 - Caveats and validation gaps
 
-Keep chart guidance light: choose line charts for trends, bars for category comparison, stacked areas for composition over time, scatter plots for outliers, and tables for audit trails. Do not do deep visual design here.
+Keep chart decisions centralized in `onchain-charting`; do not duplicate chart-selection rules in platform skills.
 
 ## References
 
 - Read `references/platform-selection.md` when choosing between platforms.
 - Read `references/report-template.md` when the user asks for a final analysis report.
-- Read `references/charting-lite.md` when the user asks for basic chart guidance.
+- Read `references/charting-lite.md` only as a compatibility pointer to `onchain-charting`.
