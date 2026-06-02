@@ -1,6 +1,6 @@
 ---
 name: onchain-planner
-description: Entry planner for onchain analysis workflows. Use when Codex needs to decide which skills to use, in what order, for wallet, token, protocol, market, derivatives/perp position, Hyperliquid/HyperCore, dashboard, chart, notebook, or report tasks; creates a skill execution plan, chooses the run directory, and routes follow-up work to onchain-analysis, onchain-charting, platform skills, Binance Web3 data skills, chart-visualization, or onchain-finalizer.
+description: Entry planner for onchain analysis workflows. Use when Codex needs to decide which skills to use, in what order, for wallet, token, protocol, market, derivatives/perp position, Binance Futures, Hyperliquid/HyperCore, dashboard, chart, notebook, or report tasks; creates a skill execution plan, chooses the run directory, and routes follow-up work to onchain-analysis, onchain-charting, platform skills, Binance Web3 data skills, chart-visualization, or onchain-finalizer.
 ---
 
 # Onchain Planner
@@ -45,6 +45,7 @@ Use this shape in `specs/skill-plan.md` and in the user-facing planning answer:
 - Use `chart-visualization` only after `onchain-charting` confirms the data is chart-ready and safe for the AntV online API.
 - Use `onchain-finalizer` before delivery whenever the workflow produced files.
 - Use Binance Web3 market data skills only as data inputs for token search, market data, K-lines, address holdings, audits, rankings, meme data, tokenized securities, and smart-money signal datasets.
+- Use `binance-futures-market-data` for Binance USDS-M/COIN-M perpetual or delivery futures chart datasets such as funding, open interest, basis, long/short ratios, taker buy/sell volume, futures klines, mark/index/premium prices, and user force orders when authenticated user data is explicitly requested.
 - Use Arkham, Etherscan, Dune, Hex, Observable, or Deepnote only when the task specifically needs that platform's data model, API, SQL, notebook, dashboard, or delivery surface.
 - Treat Hyperliquid and HyperCore as the same routing family for planning. Route perp positions, spot balances, account summaries, trades, margin, leverage, funding, liquidation price, or open-position questions to `onchain-analysis` -> `arkham-intelligence-api` unless the user explicitly asks for direct Hyperliquid API implementation.
 - Before saying a named platform is unsupported, check known aliases in downstream references and return the closest supported route plus any remaining gap.

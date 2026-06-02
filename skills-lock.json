@@ -1,6 +1,13 @@
 {
   "version": 1,
   "skills": {
+    "binance-futures-market-data": {
+      "source": "binance/binance-skills-hub",
+      "sourceType": "github-derived",
+      "skillPath": "skills/binance/binance/references/futures-usds.md;skills/binance/binance/references/futures-coin.md",
+      "sourceCommit": "ea2ae15308497b42e0b346c3945d4ca8914790d8",
+      "computedHash": "ee4ef4849067297ff7c89954e88a42bb217e4becbdc32b23906437b0b9ef7752"
+    },
     "binance-tokenized-securities-info": {
       "source": "binance/binance-skills-hub",
       "sourceType": "github",

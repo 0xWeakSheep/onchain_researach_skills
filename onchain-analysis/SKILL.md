@@ -1,6 +1,6 @@
 ---
 name: onchain-analysis
-description: Cross-platform onchain analysis coordinator. Use when Codex needs to plan, execute, or review wallet, entity, token, protocol, bridge, exchange, derivatives/perp positions, Hyperliquid/HyperCore, flow, dashboard, or reporting work across Arkham, Etherscan, Dune, Hex, Observable, Deepnote, Binance Web3 market data, or similar tools; choose data sources, define metrics, write query/API plans, cross-check results, and hand chart work to onchain-charting.
+description: Cross-platform onchain analysis coordinator. Use when Codex needs to plan, execute, or review wallet, entity, token, protocol, bridge, exchange, derivatives/perp positions, Binance Futures, Hyperliquid/HyperCore, flow, dashboard, or reporting work across Arkham, Etherscan, Dune, Hex, Observable, Deepnote, Binance Web3 market data, or similar tools; choose data sources, define metrics, write query/API plans, cross-check results, and hand chart work to onchain-charting.
 ---
 
 # Onchain Analysis
@@ -17,6 +17,7 @@ Coordinate onchain analysis across explorer APIs, intelligence APIs, SQL warehou
 - Use `hex-analytics` when the requested output is a collaborative SQL/Python notebook, app, report, scheduled run, or stakeholder-facing internal analysis.
 - Use `observable-notebooks` when the requested output is a reactive JavaScript notebook, interactive visualization, Plot/D3 chart, public embed, or lightweight web-native exploratory notebook.
 - Use `deepnote-notebooks` when the requested output is an AI-assisted SQL/Python notebook, scheduled notebook, API-triggered run, Streamlit app, or team workflow.
+- Use `binance-futures-market-data` for Binance USDS-M/COIN-M perpetual and delivery futures chart data: funding rates, open interest, basis, long/short ratios, top trader ratios, taker buy/sell volume, futures klines, mark/index/premium prices, and authenticated user force-order history.
 - Use Binance Web3 market data project skills only for token search, token market data/K-lines, address holdings, audit signals, tokenized securities, market rankings, meme launch data, and smart-money signal datasets. Do not route wallet operations, payments, posting, fiat/P2P, or order execution through this repository.
 - Use `onchain-planner` first when the request needs a multi-step skill sequence or when it is unclear whether analysis, charting, platform data, notebook, or report skills are needed.
 - Use `onchain-charting` for chart type selection, data shaping, rendering route, and visual QA whenever the output includes a chart, dashboard, diagram, or report figure.

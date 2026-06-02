@@ -19,7 +19,7 @@ Codex skill pack for onchain analysis charts: route data sources, shape analysis
 |---|---|---|
 | Plan workflow and skill sequence | `onchain-planner` | `out/runs/<run_id>/specs/skill-plan.md`, `out/runs/<run_id>/run.md` |
 | Define scope and source | `onchain-analysis` | `out/runs/<run_id>/run.md`, `out/runs/<run_id>/specs/` |
-| Platform-specific plan or collection | Arkham, Etherscan, Dune, Hex, Observable, Deepnote, or Binance Web3 data skill | `out/runs/<run_id>/data/`, `out/runs/<run_id>/logs/` |
+| Platform-specific plan or collection | Arkham, Etherscan, Dune, Hex, Observable, Deepnote, Binance Web3 data skill, or Binance futures market data skill | `out/runs/<run_id>/data/`, `out/runs/<run_id>/logs/` |
 | Chart planning and data shaping | `onchain-charting` | `out/runs/<run_id>/specs/`, `out/runs/<run_id>/summaries/` |
 | Render chart image or diagram | `chart-visualization`, Mermaid/FigJam, notebook, spreadsheet, or frontend chart library | `out/runs/<run_id>/charts/` |
 | Final narrative or report | `onchain-analysis` plus `onchain-charting` QA | `out/runs/<run_id>/reports/` |
@@ -39,18 +39,21 @@ Codex skill pack for onchain analysis charts: route data sources, shape analysis
 | `hex-analytics` | Hex SQL/Python notebooks, chart cells, data apps, integrations, and shared reports. |
 | `observable-notebooks` | Observable notebooks, Plot, Inputs, SQL/data cells, sharing, and embeds. |
 | `deepnote-notebooks` | Deepnote SQL/Python notebooks, chart blocks, integrations, schedules, APIs, and apps. |
+| `binance-futures-market-data` | Binance USDS-M/COIN-M perpetual and delivery futures chart data: funding, OI, basis, long/short ratios, taker volume, futures klines, mark/index/premium prices, and user force orders when authenticated data is explicitly requested. |
 
 ## Project Installed Skills
 
 - `chart-visualization`: Installed from `antvis/chart-visualization-skills@chart-visualization`.
   It generates chart images through the AntV online visualization API, so redact sensitive data before using it on private investigations.
+- `binance-futures-market-data`: Derived from `binance/binance-skills-hub` futures references for read-only USDS-M/COIN-M perpetual and delivery futures datasets used in chart workflows.
+  It is not for placing, modifying, or canceling futures orders.
 - Binance Web3 market data skills from `binance/binance-skills-hub`: `binance-tokenized-securities-info`, `crypto-market-rank`, `meme-rush`, `query-address-info`, `query-token-audit`, `query-token-info`, `trading-signal`.
   These are kept only as market, token, address, audit, and signal data sources for chart workflows.
 
 ## Scope
 
 Keep skills that help with onchain analysis data, chart planning, chart rendering, and report/dashboard figures.
-Do not add broad trading, wallet operation, payment, posting, fiat/P2P, or CEX account-management skills unless they are explicitly needed for a chart workflow.
+Do not add broad trading, wallet operation, payment, posting, fiat/P2P, or CEX account-management skills unless they are explicitly needed for a chart workflow. Binance futures coverage is read-only market-data oriented and must not be used for order execution.
 
 ## Output Contract
 
