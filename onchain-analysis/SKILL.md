@@ -1,6 +1,6 @@
 ---
 name: onchain-analysis
-description: Cross-platform onchain analysis coordinator. Use when Codex needs to plan, execute, or review wallet, entity, token, protocol, bridge, exchange, flow, dashboard, or reporting work across Arkham, Etherscan, Dune, Hex, Observable, Deepnote, Binance Web3 market data, or similar tools; choose data sources, define metrics, write query/API plans, cross-check results, and hand chart work to onchain-charting.
+description: Cross-platform onchain analysis coordinator. Use when Codex needs to plan, execute, or review wallet, entity, token, protocol, bridge, exchange, derivatives/perp positions, Hyperliquid/HyperCore, flow, dashboard, or reporting work across Arkham, Etherscan, Dune, Hex, Observable, Deepnote, Binance Web3 market data, or similar tools; choose data sources, define metrics, write query/API plans, cross-check results, and hand chart work to onchain-charting.
 ---
 
 # Onchain Analysis
@@ -11,7 +11,7 @@ Coordinate onchain analysis across explorer APIs, intelligence APIs, SQL warehou
 
 ## Routing
 
-- Use `arkham-intelligence-api` for entity attribution, label confidence, wallet/entity portfolios, counterparty maps, flows, transfers, alerts, and intelligence updates.
+- Use `arkham-intelligence-api` for entity attribution, label confidence, wallet/entity portfolios, counterparty maps, flows, transfers, alerts, intelligence updates, and Hyperliquid/HyperCore perp positions, spot balances, account summaries, or trades.
 - Use `etherscan-api` for raw EVM explorer data: address transactions, ERC transfers, logs/topics, contract ABI/source, gas, block stats, chain IDs, and verification status.
 - Use `dune-analytics` for SQL over indexed onchain data, dashboards, query APIs, materialized views, uploads, pipelines, dbt, Trino, and cross-chain aggregate metrics.
 - Use `hex-analytics` when the requested output is a collaborative SQL/Python notebook, app, report, scheduled run, or stakeholder-facing internal analysis.
@@ -26,7 +26,7 @@ Coordinate onchain analysis across explorer APIs, intelligence APIs, SQL warehou
 
 1. Confirm the active `onchain-planner` skill plan when the task has multiple steps.
 2. Create or reuse `out/runs/<run_id>/` and initialize `manifest.json` plus `run.md`.
-3. Define the subject: chain(s), address/entity/token/protocol, timeframe, asset scope, and required granularity.
+3. Define the subject: chain(s), address/entity/token/protocol, venue, timeframe, asset scope, and required granularity. For perp-position work, also record market, side, size/notional, margin currency, leverage, liquidation-price assumptions, funding, and PnL fields when available.
 4. Choose source roles: primary data source, secondary validation source, visualization/reporting surface, and any manual explorer check.
 5. Define metrics before querying: units, USD conversion source, timestamp convention, block range, inclusion/exclusion rules, and dedupe keys.
 6. Collect data with reproducible parameters and preserve query/API URLs, query IDs, endpoint names, or notebook links.

@@ -42,6 +42,15 @@ Use `GET /flow/address/{address}` or `GET /flow/entity/{entity}` for historical 
 4. For token-specific exposure, fetch token balance and market data.
 5. State whether values are token units, USD, current price, or historical price.
 
+## Hyperliquid / HyperCore Position Analysis
+
+1. Treat Hyperliquid user wording as HyperCore in Arkham references. Do not report "no related skill" just because there is no Hyperliquid-named skill directory.
+2. Resolve the subject as address, entity, or account scope before querying. Record whether the user wants current positions, account summary, spot balances, trades, funding, liquidation risk, or a chart/report.
+3. Use the HyperCore endpoint group from `references/docs-map.md` for perp positions, spot balances, account summary, and trades. Re-read the endpoint-specific official Markdown before writing production request parameters or code.
+4. Preserve market, side, size, notional, margin currency, leverage, liquidation price, unrealized PnL, realized PnL, funding, timestamp, and trade identifiers when available.
+5. For chart work, hand the shaped data to `onchain-charting`; common outputs are position notional by market, PnL over time, funding paid/received, exposure by side, and liquidation-risk tables.
+6. If the user explicitly asks for direct official Hyperliquid API integration, state that this repository currently has no dedicated direct Hyperliquid skill and propose adding one instead of pretending Arkham is the official API.
+
 ## Token or Market Review
 
 1. Resolve token by ID or chain/address.

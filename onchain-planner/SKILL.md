@@ -1,6 +1,6 @@
 ---
 name: onchain-planner
-description: Entry planner for onchain analysis workflows. Use when Codex needs to decide which skills to use, in what order, for wallet, token, protocol, market, dashboard, chart, notebook, or report tasks; creates a skill execution plan, chooses the run directory, and routes follow-up work to onchain-analysis, onchain-charting, platform skills, Binance Web3 data skills, chart-visualization, or onchain-finalizer.
+description: Entry planner for onchain analysis workflows. Use when Codex needs to decide which skills to use, in what order, for wallet, token, protocol, market, derivatives/perp position, Hyperliquid/HyperCore, dashboard, chart, notebook, or report tasks; creates a skill execution plan, chooses the run directory, and routes follow-up work to onchain-analysis, onchain-charting, platform skills, Binance Web3 data skills, chart-visualization, or onchain-finalizer.
 ---
 
 # Onchain Planner
@@ -13,7 +13,7 @@ Do not use this skill to fetch data, write SQL, call APIs, or design charts in d
 
 ## Planning Workflow
 
-1. Classify the request: analysis, data lookup, chart, dashboard, notebook, report, security check, market scan, or mixed workflow.
+1. Classify the request: analysis, data lookup, chart, dashboard, notebook, report, security check, market scan, derivatives/perp position review, or mixed workflow.
 2. Create or reuse `out/runs/<run_id>/` when files may be produced.
 3. Write or update `out/runs/<run_id>/specs/skill-plan.md` when the task has more than one step or uses more than one skill.
 4. Select the next skill sequence using `references/skill-routing.md`.
@@ -46,6 +46,8 @@ Use this shape in `specs/skill-plan.md` and in the user-facing planning answer:
 - Use `onchain-finalizer` before delivery whenever the workflow produced files.
 - Use Binance Web3 market data skills only as data inputs for token search, market data, K-lines, address holdings, audits, rankings, meme data, tokenized securities, and smart-money signal datasets.
 - Use Arkham, Etherscan, Dune, Hex, Observable, or Deepnote only when the task specifically needs that platform's data model, API, SQL, notebook, dashboard, or delivery surface.
+- Treat Hyperliquid and HyperCore as the same routing family for planning. Route perp positions, spot balances, account summaries, trades, margin, leverage, funding, liquidation price, or open-position questions to `onchain-analysis` -> `arkham-intelligence-api` unless the user explicitly asks for direct Hyperliquid API implementation.
+- Before saying a named platform is unsupported, check known aliases in downstream references and return the closest supported route plus any remaining gap.
 - If a user asks only for a quick explanation and no artifact, produce the skill sequence without creating files.
 
 ## References

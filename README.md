@@ -33,7 +33,7 @@ Codex skill pack for onchain analysis charts: route data sources, shape analysis
 | `onchain-analysis` | Main onchain analysis router for wallet, token, protocol, flow, and dashboard tasks. |
 | `onchain-charting` | Chart selection, data shaping, tool routing, and visual QA. |
 | `onchain-finalizer` | Ending convergence check for artifact placement, manifest paths, and delivery output paths. |
-| `arkham-intelligence-api` | Arkham entity, address, flow, portfolio, transfer, token, and alert workflows. |
+| `arkham-intelligence-api` | Arkham entity, address, flow, portfolio, Hyperliquid/HyperCore position, transfer, token, and alert workflows. |
 | `etherscan-api` | Etherscan API V2 for EVM addresses, contracts, logs, token transfers, stats, gas, and verification. |
 | `dune-analytics` | Dune SQL, Data API, catalog, materialized views, uploads, pipelines, and dashboards. |
 | `hex-analytics` | Hex SQL/Python notebooks, chart cells, data apps, integrations, and shared reports. |

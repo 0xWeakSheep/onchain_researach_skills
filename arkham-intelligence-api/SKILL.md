@@ -1,13 +1,13 @@
 ---
 name: arkham-intelligence-api
-description: Arkham Intel API workflow guide. Use when Codex needs Arkham API guidance for address or entity intelligence, labels, tags, attribution confidence, token balances, portfolios, transfers, flows, counterparties, market data, Polymarket, alerts, private entities, WebSocket sessions, credit usage, rate limits, pagination, authentication, errors, or coding-agent use of Arkham docs.
+description: Arkham Intel API workflow guide. Use when Codex needs Arkham API guidance for address or entity intelligence, labels, tags, attribution confidence, token balances, portfolios, transfers, flows, counterparties, market data, Hyperliquid/HyperCore perp positions, spot balances, account summaries, trades, Polymarket, alerts, private entities, WebSocket sessions, credit usage, rate limits, pagination, authentication, errors, or coding-agent use of Arkham docs.
 ---
 
 # Arkham Intelligence API
 
 ## Overview
 
-Use Arkham when analysis depends on entity-first intelligence, labels, attribution, enriched transfers, counterparty context, and portfolio/flow views that raw explorer data does not provide.
+Use Arkham when analysis depends on entity-first intelligence, labels, attribution, enriched transfers, counterparty context, portfolio/flow views, or HyperCore derivatives/account views that raw explorer data does not provide.
 
 ## Workflow
 
@@ -23,6 +23,7 @@ Use Arkham when analysis depends on entity-first intelligence, labels, attributi
 - Address/entity intelligence: lookup, enriched lookup, batch lookup, all-chain lookup, updates.
 - Money movement: transfers, transfer histograms, transaction transfers, flow, volume, counterparties.
 - Holdings: balances, portfolio history, portfolio time series, token balances, loans/borrows.
+- Hyperliquid/HyperCore: perp positions, spot balances, account summaries, trades, and position-exposure review.
 - Token and market views: token intelligence, holders, prices, market data, trending/top tokens, volume, top flow.
 - Operations: auth, pagination, errors, usage analytics, subscription usage, alerts, private entities, user labels.
 
