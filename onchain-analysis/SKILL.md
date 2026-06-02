@@ -20,6 +20,7 @@ Coordinate onchain analysis across explorer APIs, intelligence APIs, SQL warehou
 - Use Binance Web3 market data project skills only for token search, token market data/K-lines, address holdings, audit signals, tokenized securities, market rankings, meme launch data, and smart-money signal datasets. Do not route wallet operations, payments, posting, fiat/P2P, or order execution through this repository.
 - Use `onchain-planner` first when the request needs a multi-step skill sequence or when it is unclear whether analysis, charting, platform data, notebook, or report skills are needed.
 - Use `onchain-charting` for chart type selection, data shaping, rendering route, and visual QA whenever the output includes a chart, dashboard, diagram, or report figure.
+- Use `onchain-finalizer` before final delivery when analysis files, charts, reports, specs, or logs were produced.
 
 ## Analysis Workflow
 
@@ -31,7 +32,8 @@ Coordinate onchain analysis across explorer APIs, intelligence APIs, SQL warehou
 6. Collect data with reproducible parameters and preserve query/API URLs, query IDs, endpoint names, or notebook links.
 7. Store data, specs, summaries, logs, reports, and chart outputs under the active `out/runs/<run_id>/` directory.
 8. Cross-check totals across at least two independent surfaces when the conclusion depends on balances, volumes, labels, or transfers.
-9. Output concise findings with method, caveats, and next checks.
+9. Use `onchain-finalizer` to verify artifact location convergence before final delivery.
+10. Output concise findings with method, caveats, and next checks.
 
 ## Output Contract
 

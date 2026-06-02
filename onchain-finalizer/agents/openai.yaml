@@ -1,0 +1,4 @@
+interface:
+  display_name: "Onchain Finalizer"
+  short_description: "Verify final artifact placement and output paths."
+  default_prompt: "Use $onchain-finalizer to verify that an onchain run's artifacts are correctly placed before delivery."

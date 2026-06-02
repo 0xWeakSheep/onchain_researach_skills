@@ -1,0 +1,5 @@
+output-location-check: OK
+run_dir: out/runs/legacy-eth-usdc
+checked: required shape, manifest paths, artifact placement
+checked: repository root misplacements
+log: logs/output-location-check.txt

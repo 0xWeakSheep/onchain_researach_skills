@@ -11,6 +11,7 @@ Codex skill pack for onchain analysis charts: route data sources, shape analysis
 5. Use `onchain-charting` before producing any chart, dashboard, diagram, or report figure.
 6. Use `chart-visualization` only when a hosted AntV chart image is appropriate and the data is safe to send to its online API.
 7. Store every artifact in the active `out/runs/<run_id>/` directory and update `manifest.json`.
+8. Use `onchain-finalizer` before delivery to verify artifact location convergence.
 
 ## Skill Flow
 
@@ -22,6 +23,7 @@ Codex skill pack for onchain analysis charts: route data sources, shape analysis
 | Chart planning and data shaping | `onchain-charting` | `out/runs/<run_id>/specs/`, `out/runs/<run_id>/summaries/` |
 | Render chart image or diagram | `chart-visualization`, Mermaid/FigJam, notebook, spreadsheet, or frontend chart library | `out/runs/<run_id>/charts/` |
 | Final narrative or report | `onchain-analysis` plus `onchain-charting` QA | `out/runs/<run_id>/reports/` |
+| Finalize artifact location | `onchain-finalizer` | `out/runs/<run_id>/logs/output-location-check.txt`, `out/runs/<run_id>/manifest.json` |
 
 ## Skills
 
@@ -30,6 +32,7 @@ Codex skill pack for onchain analysis charts: route data sources, shape analysis
 | `onchain-planner` | Entry planner that chooses skill sequence, run directory, expected artifacts, and validation gates. |
 | `onchain-analysis` | Main onchain analysis router for wallet, token, protocol, flow, and dashboard tasks. |
 | `onchain-charting` | Chart selection, data shaping, tool routing, and visual QA. |
+| `onchain-finalizer` | Ending convergence check for artifact placement, manifest paths, and delivery output paths. |
 | `arkham-intelligence-api` | Arkham entity, address, flow, portfolio, transfer, token, and alert workflows. |
 | `etherscan-api` | Etherscan API V2 for EVM addresses, contracts, logs, token transfers, stats, gas, and verification. |
 | `dune-analytics` | Dune SQL, Data API, catalog, materialized views, uploads, pipelines, and dashboards. |

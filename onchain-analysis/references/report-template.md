@@ -25,6 +25,7 @@ Explain the steps in execution order:
 5. Normalization and deduplication.
 6. Cross-checks.
 7. Chart or report assembly through `onchain-charting`.
+8. Artifact location check through `onchain-finalizer`.
 
 ## Findings
 
@@ -48,6 +49,7 @@ List final files:
 - `manifest.json`:
 - `run.md`:
 - `specs/skill-plan.md`:
+- `logs/output-location-check.txt`:
 - `data/`:
 - `charts/`:
 - `summaries/`:

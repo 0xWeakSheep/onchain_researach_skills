@@ -42,3 +42,5 @@ reports/eth-usdc-daily-volume.md
 ## Manifest Update
 
 Before final delivery, update `out/runs/<run_id>/manifest.json` so every file appears under the correct `artifacts` section.
+
+Then use `onchain-finalizer` to verify the active run directory, manifest paths, and repository-root misplacement check.

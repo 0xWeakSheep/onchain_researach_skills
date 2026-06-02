@@ -20,11 +20,13 @@ Use this skill as the chart entry point after `onchain-planner` has chosen the w
 7. Choose the output tool using `references/tool-routing.md`.
 8. Store chart specs in `specs/`, rendered charts in `charts/`, summaries in `summaries/`, and final figure notes in `reports/`.
 9. Apply `references/visual-qa.md` before final delivery.
+10. Use `onchain-finalizer` to verify chart artifacts are placed and listed correctly.
 
 ## Tool Rules
 
 - Use `chart-visualization` when the user wants a generated chart image and the data is safe to send to the AntV online API.
 - Use `onchain-analysis` for upstream data-source selection, metric definition, and platform-specific collection plans.
+- Use `onchain-finalizer` before final delivery when chart files, specs, summaries, reports, or logs were produced.
 - Use Mermaid or FigJam for flowcharts, sequence diagrams, decision trees, ER diagrams, and architecture diagrams.
 - Use notebook/front-end chart libraries when the user needs reusable code, interactivity, local data privacy, or a dashboard.
 - Use tables beside charts when exact addresses, transaction hashes, token symbols, or source rows must remain auditable.

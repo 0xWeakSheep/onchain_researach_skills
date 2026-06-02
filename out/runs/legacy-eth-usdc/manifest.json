@@ -21,7 +21,14 @@
     "summaries": ["summaries/eth_usdc_daily_volume_summary.json"],
     "reports": [],
     "specs": [],
-    "logs": []
+    "logs": ["logs/output-location-check.txt"]
+  },
+  "finalization": {
+    "artifact_location_check": {
+      "status": "passed",
+      "checked_at": "2026-06-02T00:00:00Z",
+      "log": "logs/output-location-check.txt"
+    }
   },
   "caveats": [
     "Migrated from legacy root-level files.",

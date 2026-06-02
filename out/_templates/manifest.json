@@ -20,6 +20,13 @@
     "specs": [],
     "logs": []
   },
+  "finalization": {
+    "artifact_location_check": {
+      "status": "pending",
+      "checked_at": "",
+      "log": ""
+    }
+  },
   "caveats": [],
   "next_checks": []
 }

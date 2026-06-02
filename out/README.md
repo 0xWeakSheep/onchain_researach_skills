@@ -27,9 +27,30 @@ out/runs/YYYYMMDD-topic-slug/
 | `summaries/` | Machine-readable metric summaries: `.json`, `.md` |
 | `reports/` | Human-readable analysis reports, memos, decks, or exports |
 | `specs/` | Chart specs, API/query plans, prompts, rendering configs |
-| `logs/` | Execution notes, command logs, validation traces |
+| `logs/` | Execution notes, command logs, validation traces, finalizer checks |
 
 Do not place generated artifacts in the repository root or in `generated/`.
+
+## Artifact Location Gate
+
+Before final delivery, `onchain-finalizer` must verify the active run directory:
+
+- The run directory is under `out/runs/<run_id>/`.
+- Top-level run files are limited to `manifest.json` and `run.md`.
+- Final artifacts live only in `data/`, `charts/`, `summaries/`, `reports/`, `specs/`, or `logs/`.
+- Manifest artifact paths are run-relative, existing, and match their artifact section.
+- Non-placeholder artifact files are listed in `manifest.json`.
+- No delivered output remains in the repository root or `generated/`.
+
+Preferred command:
+
+```bash
+python3 onchain-finalizer/scripts/check_output_location.py out/runs/<run_id> --scan-repo --write-log logs/output-location-check.txt
+```
+
+For multi-step runs, add `--require-skill-plan`.
+
+Before using `--write-log`, list `logs/output-location-check.txt` in `manifest.json` under `artifacts.logs`.
 
 ## Required Files
 
@@ -67,3 +88,4 @@ reports/eth-usdc-volume-report.md
 4. `onchain-charting`: choose chart type, shape chart data, decide renderer, run visual QA.
 5. `chart-visualization`: generate hosted AntV image only when data is safe for external upload.
 6. Final output: write all artifacts to the active `out/runs/<run_id>/` directory and update `manifest.json`.
+7. `onchain-finalizer`: verify artifact location convergence and record the check in `logs/`.

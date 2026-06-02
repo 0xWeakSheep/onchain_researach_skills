@@ -1,6 +1,6 @@
 ---
 name: onchain-planner
-description: Entry planner for onchain analysis workflows. Use when Codex needs to decide which skills to use, in what order, for wallet, token, protocol, market, dashboard, chart, notebook, or report tasks; creates a skill execution plan, chooses the run directory, and routes follow-up work to onchain-analysis, onchain-charting, platform skills, Binance Web3 data skills, or chart-visualization.
+description: Entry planner for onchain analysis workflows. Use when Codex needs to decide which skills to use, in what order, for wallet, token, protocol, market, dashboard, chart, notebook, or report tasks; creates a skill execution plan, chooses the run directory, and routes follow-up work to onchain-analysis, onchain-charting, platform skills, Binance Web3 data skills, chart-visualization, or onchain-finalizer.
 ---
 
 # Onchain Planner
@@ -22,7 +22,8 @@ Do not use this skill to fetch data, write SQL, call APIs, or design charts in d
 7. Route chart and rendering decisions to `onchain-charting`.
 8. Route platform-specific details to only the platform skill needed for that step.
 9. Record privacy and API-key constraints before using external APIs or hosted chart renderers.
-10. Keep `manifest.json` and `run.md` aligned with the selected skill plan.
+10. Include `onchain-finalizer` as the last step whenever files will be delivered.
+11. Keep `manifest.json` and `run.md` aligned with the selected skill plan.
 
 ## Planner Output
 
@@ -42,6 +43,7 @@ Use this shape in `specs/skill-plan.md` and in the user-facing planning answer:
 - Use `onchain-analysis` after planning for metric definition, source selection, validation method, and platform handoff.
 - Use `onchain-charting` after planning whenever the output includes a chart, dashboard, figure, or diagram.
 - Use `chart-visualization` only after `onchain-charting` confirms the data is chart-ready and safe for the AntV online API.
+- Use `onchain-finalizer` before delivery whenever the workflow produced files.
 - Use Binance Web3 market data skills only as data inputs for token search, market data, K-lines, address holdings, audits, rankings, meme data, tokenized securities, and smart-money signal datasets.
 - Use Arkham, Etherscan, Dune, Hex, Observable, or Deepnote only when the task specifically needs that platform's data model, API, SQL, notebook, dashboard, or delivery surface.
 - If a user asks only for a quick explanation and no artifact, produce the skill sequence without creating files.

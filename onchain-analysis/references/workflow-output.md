@@ -17,6 +17,7 @@ Use this file when starting any chain-analysis task that may produce files.
 11. Store final reports in `reports/`.
 12. Store command logs and validation traces in `logs/`.
 13. Update `manifest.json` before final delivery.
+14. Use `onchain-finalizer` to verify artifact location convergence and store the check output in `logs/`.
 
 ## Skill Routing
 
@@ -27,7 +28,7 @@ Use this file when starting any chain-analysis task that may produce files.
 | "Write SQL/API plan" | `onchain-planner` | `onchain-analysis`, then Dune, Etherscan, Arkham, Hex, Deepnote |
 | "Make a chart/dashboard/report figure" | `onchain-planner` | `onchain-charting`, then `chart-visualization`, Mermaid/FigJam, notebook, spreadsheet, or frontend chart |
 | "Need an interactive notebook" | `onchain-planner` | `onchain-analysis`, then Hex, Observable, or Deepnote, then `onchain-charting` |
-| "Need final report" | `onchain-planner` | `onchain-analysis`, then `onchain-charting` for chart QA |
+| "Need final report" | `onchain-planner` | `onchain-analysis`, then `onchain-charting` for chart QA, then `onchain-finalizer` |
 
 ## Artifact Rules
 
@@ -36,3 +37,4 @@ Use this file when starting any chain-analysis task that may produce files.
 - Every delivered file must appear in `manifest.json`.
 - Every chart must have a chart-ready data source or a chart spec.
 - Every final report must state source, metric definition, time window, caveats, and output paths.
+- Every file-producing run must pass the `onchain-finalizer` artifact location gate before delivery.
