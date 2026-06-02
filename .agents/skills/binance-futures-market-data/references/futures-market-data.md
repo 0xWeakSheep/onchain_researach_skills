@@ -29,6 +29,21 @@ This reference keeps only read-oriented datasets useful for charts and analysis.
 | Flow and microstructure | `taker-buy-sell-volume`, `order-book`, `rpi-order-book`, `recent-trades-list`, `compressed-aggregate-trades-list`, `old-trades-lookup`, `symbol-order-book-ticker` | `taker-buy-sell-volume`, `order-book`, `recent-trades-list`, `compressed-aggregate-trades-list`, `old-trades-lookup`, `symbol-order-book-ticker` | Taker imbalance, depth snapshots, trade intensity |
 | Risk snapshots | `adl-risk`, `query-insurance-fund-balance-snapshot` | none listed in source snapshot | ADL/insurance fund context |
 
+## Market-Wide Liquidations
+
+Binance Futures market-wide liquidation events should be treated as a real-time subscription dataset, not a historical HTTPS dataset.
+
+| Need | Route | Limitation |
+|---|---|---|
+| Real-time USDS-M liquidation events | WebSocket force-order stream, e.g. `wss://fstream.binance.com/ws/btcusdt@forceOrder` | Only events after subscription starts; no backfill |
+| Real-time COIN-M liquidation events | COIN-M WebSocket force-order stream for the contract or pair | Only events after subscription starts; no backfill |
+| Past market-wide liquidation volume | Third-party historical aggregation provider, if credentials are available | Not provided by a dependable Binance HTTPS route in this skill |
+| Account's own liquidation history | Authenticated user force-order HTTPS endpoints | User/account scope only; not market-wide data |
+
+The old public HTTPS route `GET /fapi/v1/allForceOrders` may appear in legacy references, but current checks have returned `{"code":400,"msg":"The endpoint has been out of maintenance"}`. Do not use it as the basis for historical market-wide liquidation charts unless a fresh official-doc check and live request confirm that Binance has restored it.
+
+For force-order event direction, `SELL` normally represents long liquidation because the long position is force-sold, while `BUY` normally represents short liquidation because the short position is force-bought. For USDT-margined contracts, liquidation notional can be estimated as `average price * executed quantity` in quote currency.
+
 ## Authenticated User Data
 
 | User data | USDS-M endpoint names | COIN-M endpoint names | Scope |

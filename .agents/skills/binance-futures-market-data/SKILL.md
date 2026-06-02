@@ -5,7 +5,7 @@ description: |
   Use when users ask for Binance Futures data for analysis or charts: futures klines, continuous contract klines,
   mark/index/premium price, funding rates, funding info, open interest, open interest statistics, basis,
   long/short ratios, top trader ratios, taker buy/sell volume, order book/trades, 24h ticker stats,
-  quarterly settlement price, ADL risk, or user force-order/liquidation history when authenticated user data is explicitly requested.
+  quarterly settlement price, ADL risk, real-time market-wide liquidation subscriptions, or user force-order/liquidation history when authenticated user data is explicitly requested.
   NOT for placing, modifying, or canceling futures orders; payments; P2P; wallet operations; or spot/token Web3 data.
 metadata:
   author: project-derived-from-binance-skills-hub
@@ -27,7 +27,15 @@ Use this skill for read-only Binance Futures datasets that feed charting or deri
 - USDS-M futures: use for USDT-M/USDC-M perpetual and delivery-style futures datasets.
 - COIN-M futures: use for coin-margined perpetual and quarterly delivery contracts.
 - Delivery/quarterly contracts: prefer continuous contract klines, basis, quarterly settlement price, open interest statistics, and contract-type filters.
-- Liquidation wording: distinguish market-wide liquidation data from authenticated user force-order history. This Binance Skills Hub snapshot lists user's force-order endpoints, not a public market-wide liquidation feed.
+- Liquidation wording: distinguish real-time market-wide liquidation streams from authenticated user force-order history. The currently reliable Binance route for market-wide liquidations is WebSocket subscription from the time of connection forward; do not claim Binance can backfill prior market-wide liquidation history through HTTPS.
+
+## Liquidation Data Limits
+
+- Market-wide liquidations: use Binance Futures WebSocket force-order streams, such as `wss://fstream.binance.com/ws/btcusdt@forceOrder` for USDS-M `BTCUSDT`. These streams only deliver events after the subscription is active and cannot query past hours or days.
+- Historical market-wide liquidations: do not use Binance HTTPS as a dependable source for past market-wide liquidation data. The previously known `GET /fapi/v1/allForceOrders` route may appear in old references, but it has returned `{"code":400,"msg":"The endpoint has been out of maintenance"}` in current checks. Treat it as unavailable unless Binance official docs and a live request prove otherwise.
+- User force orders: authenticated HTTPS force-order endpoints are for the requesting account's own liquidation or ADL records. They are not market-wide liquidation volume and must not be used to answer requests like "BTCUSDT market liquidation volume over the last 24 hours."
+- Backfill requirement: if a user asks for past market-wide liquidation volume, use a third-party historical aggregation provider with credentials, or explain that Binance WebSocket collection must start now and accumulate future data.
+- Direction mapping for force-order events: `SELL` usually means a long position was force-sold, so label it as long liquidation; `BUY` usually means a short position was force-bought, so label it as short liquidation. Keep this mapping explicit in charts and summaries.
 
 ## Workflow
 
@@ -51,6 +59,8 @@ Use this skill for read-only Binance Futures datasets that feed charting or deri
 | Long/short sentiment | long/short ratio and top trader long/short ratios |
 | Aggressive buy/sell pressure | taker buy/sell volume |
 | Order-book depth or microstructure | order book, recent trades, aggregate trades |
+| Real-time market-wide liquidations | WebSocket force-order stream only; subscription starts now and has no historical backfill |
+| Historical market-wide liquidation volume | Not available from dependable Binance HTTPS in this skill; use a third-party historical provider if credentials are supplied |
 | User liquidation history | user's force orders only; auth required |
 
 ## Safety And Scope
