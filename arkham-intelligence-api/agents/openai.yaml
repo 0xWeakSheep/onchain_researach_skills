@@ -1,0 +1,4 @@
+interface:
+  display_name: "Arkham Intelligence API"
+  short_description: "Use Arkham Intel API for wallet/entity analysis"
+  default_prompt: "Use $arkham-intelligence-api to analyze an address, entity, token, transfer flow, or Arkham API workflow."
