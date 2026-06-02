@@ -1,0 +1,4 @@
+interface:
+  display_name: "Onchain Charting"
+  short_description: "Route onchain data into clear charts and visual QA."
+  default_prompt: "$onchain-charting"
