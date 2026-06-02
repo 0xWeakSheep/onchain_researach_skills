@@ -37,6 +37,12 @@
       "skillPath": "skills/binance-web3/meme-rush/SKILL.md",
       "computedHash": "ec36bf098d049e63614c6224b7e14455ca813872ebbec2306114b72a692de865"
     },
+    "onchain-pay-open-api": {
+      "source": "binance/binance-skills-hub",
+      "sourceType": "github",
+      "skillPath": "skills/binance/onchain-pay/SKILL.md",
+      "computedHash": "81216938a2551cfec7ce9665c7b609d31715f6e2d56c40587a1eb5a36b4ca5d3"
+    },
     "p2p": {
       "source": "binance/binance-skills-hub",
       "sourceType": "github",
