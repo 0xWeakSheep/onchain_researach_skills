@@ -25,11 +25,23 @@
       "skillPath": "skills/binance-web3/crypto-market-rank/SKILL.md",
       "computedHash": "0d3428cfe4386dbc8e9498629e2a3dc1b0244e603cac6a439ea8b2f82df7af74"
     },
+    "fiat": {
+      "source": "binance/binance-skills-hub",
+      "sourceType": "github",
+      "skillPath": "skills/binance/fiat/SKILL.md",
+      "computedHash": "75267c94e99203536837d229799c8041f7da4df27536469220d8c5cac7a137a6"
+    },
     "meme-rush": {
       "source": "binance/binance-skills-hub",
       "sourceType": "github",
       "skillPath": "skills/binance-web3/meme-rush/SKILL.md",
       "computedHash": "ec36bf098d049e63614c6224b7e14455ca813872ebbec2306114b72a692de865"
+    },
+    "p2p": {
+      "source": "binance/binance-skills-hub",
+      "sourceType": "github",
+      "skillPath": "skills/binance/p2p/SKILL.md",
+      "computedHash": "9eec3205a93629aeb57023e776a7063864167fcd844a9c064e3dd00ebf59b50a"
     },
     "query-address-info": {
       "source": "binance/binance-skills-hub",
