@@ -13,6 +13,11 @@ and notebook/reporting tools.
 - `observable-notebooks`: Build Observable notebooks with JavaScript, SQL, Plot, Inputs, data attachments, imports, sharing, and embeds.
 - `deepnote-notebooks`: Build Deepnote SQL/Python notebooks, AI analyses, integrations, schedules, APIs, apps, and team workflows.
 
+## Project Installed Skills
+
+- `chart-visualization`: Installed from `antvis/chart-visualization-skills@chart-visualization`.
+  It generates chart images through the AntV online visualization API, so redact sensitive data before using it on private investigations.
+
 ## Git Practice
 
 Changes are committed and pushed in small batches. Avoid single oversized commits.
