@@ -11,15 +11,17 @@ Use this skill as the entry point for chart-related work in this repository. It 
 
 ## Workflow
 
-1. Identify the decision the chart must support: trend, comparison, flow, distribution, relationship, audit table, or report summary.
-2. Select a chart type from `references/chart-selection.md`.
-3. Shape the data with the schemas in `references/data-shaping.md`.
-4. Choose the output tool using `references/tool-routing.md`.
-5. Apply `references/visual-qa.md` before final delivery.
+1. If the data source or metric definition is unclear, use `onchain-analysis` first to choose the source and analysis method.
+2. Identify the decision the chart must support: trend, comparison, flow, distribution, relationship, audit table, or report summary.
+3. Select a chart type from `references/chart-selection.md`.
+4. Shape the data with the schemas in `references/data-shaping.md`.
+5. Choose the output tool using `references/tool-routing.md`.
+6. Apply `references/visual-qa.md` before final delivery.
 
 ## Tool Rules
 
 - Use `chart-visualization` when the user wants a generated chart image and the data is safe to send to the AntV online API.
+- Use `onchain-analysis` for upstream data-source selection, metric definition, and platform-specific collection plans.
 - Use Mermaid or FigJam for flowcharts, sequence diagrams, decision trees, ER diagrams, and architecture diagrams.
 - Use notebook/front-end chart libraries when the user needs reusable code, interactivity, local data privacy, or a dashboard.
 - Use tables beside charts when exact addresses, transaction hashes, token symbols, or source rows must remain auditable.
