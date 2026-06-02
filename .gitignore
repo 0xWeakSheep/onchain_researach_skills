@@ -1,0 +1,13 @@
+# Generated analysis runs and intermediate outputs.
+out/runs/
+generated/
+
+# Local recording and render intermediates.
+*.mov
+*.webm
+*.mkv
+*.tmp.mp4
+*.frames/
+
+# macOS metadata.
+.DS_Store

@@ -2,6 +2,10 @@
 
 Codex skill pack for onchain analysis charts: route data sources, shape analysis outputs, and turn results into auditable visualizations.
 
+## Demo Video
+
+[Usage process demo](public/onchain-skills-usage-demo.mp4)
+
 ## Main Flow
 
 1. Use `onchain-planner` as the entry skill for multi-step analysis, charting, dashboard, notebook, or report work.
